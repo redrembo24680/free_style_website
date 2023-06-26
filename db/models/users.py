@@ -1,4 +1,7 @@
-from sqlalchemy import Column, Integer, BigInteger, Unicode, Float, Interval,Date
+from sqlalchemy import Column, Integer, BigInteger, Unicode, Float, Interval, Date, ForeignKey
+from sqlalchemy.orm import relationship
+from .country import *
+from .orders import *
 
 from .. import Base
 
@@ -41,15 +44,8 @@ class Users(Base):
     )
     ref_country_id = Column(
         Integer,
-        unique=False,
+        ForeignKey('Countries.id'),
+        unique=True,
         nullable=True
     )
-
-
-
-
-
-
-
-
-
+    order = relationship('orders')

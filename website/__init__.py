@@ -1,7 +1,7 @@
-from .site_app import app, render_template
-
+from .site_app import app
+from .routes import *
 
 __all__ = [
     'app',
-    'render_template'
+    'routes'
 ]
