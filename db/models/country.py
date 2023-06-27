@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, BigInteger, Unicode, Float, Interval
+from sqlalchemy import Column, Integer, BigInteger, Unicode, Float, Interval, ForeignKey
 from sqlalchemy.orm import relationship
 from .users import *
 
@@ -11,6 +11,7 @@ class Country(Base):
     __tablename__ = 'countries'
     id = Column(
         BigInteger,
+        ForeignKey('users.country'),
         primary_key=True,
         autoincrement=True
     )
@@ -19,6 +20,5 @@ class Country(Base):
         unique=True,
         nullable=False
     )
-    user = relationship('users', backref="countries")
 
 

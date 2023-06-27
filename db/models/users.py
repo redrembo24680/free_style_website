@@ -40,10 +40,10 @@ class Users(Base):
         unique=False,
         nullable=True
     )
-    ref_country_id = Column(
+    country = Column(
         Integer,
-        ForeignKey('countries.id'),
         unique=True,
         nullable=True
     )
+    countries = relationship('countries', backref='users')
     order = relationship('orders', backref="users")
