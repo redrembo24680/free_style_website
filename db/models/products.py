@@ -9,7 +9,6 @@ __all__ = ['Base']
 
 class Products(Base):
     __tablename__ = 'products'
-
     id = Column(
         BigInteger,
         primary_key=True,
@@ -40,4 +39,4 @@ class Products(Base):
         Unicode(225),
         nullable=False
     )
-    user = relationship('orders')
+    user = relationship('orders', backref="products")

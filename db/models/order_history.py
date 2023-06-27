@@ -7,9 +7,7 @@ __all__ = ['Base']
 
 
 class Order_history(Base):
-
     __tablename__ = 'order_history'
-
     id = Column(
         BigInteger,
         primary_key=True,

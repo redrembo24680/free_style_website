@@ -10,9 +10,7 @@ __all__ = ['Base']
 
 
 class Orders(Base):
-
     __tablename__ = 'orders'
-
     id = Column(
         BigInteger,
         primary_key=True,
@@ -35,4 +33,4 @@ class Orders(Base):
         unique=False,
         nullable=True
     )
-    order_history = relationship('order_history')
+    order_history = relationship('order_history', backref="orders")

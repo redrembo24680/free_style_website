@@ -9,9 +9,7 @@ __all__ = ['Base']
 
 
 class Users(Base):
-
     __tablename__ = 'users'
-
     id = Column(
         BigInteger,
         primary_key=True,
@@ -44,8 +42,8 @@ class Users(Base):
     )
     ref_country_id = Column(
         Integer,
-        ForeignKey('Countries.id'),
+        ForeignKey('countries.id'),
         unique=True,
         nullable=True
     )
-    order = relationship('orders')
+    order = relationship('orders', backref="users")

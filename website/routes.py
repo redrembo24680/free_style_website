@@ -23,9 +23,9 @@ def register():
 
             session.commit()
             return render_template('reg.html')
+
         except Exception:
             session.rollback()
-
 
     else:
         return render_template("register.html")

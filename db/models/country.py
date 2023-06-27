@@ -8,9 +8,7 @@ __all__ = ['Base']
 
 
 class Country(Base):
-
-    __tablename__ = 'Countries'
-
+    __tablename__ = 'countries'
     id = Column(
         BigInteger,
         primary_key=True,
@@ -21,6 +19,6 @@ class Country(Base):
         unique=True,
         nullable=False
     )
-    user = relationship('users')
+    user = relationship('users', backref="countries")
 
 

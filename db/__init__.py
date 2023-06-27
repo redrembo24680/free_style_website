@@ -8,9 +8,10 @@ __all__ = [
 ]
 
 
-# def migrate():
-#     Base.metadata.drop_all(engine)
-#     Base.metadata.create_all(engine)
-#
-#
-# migrate()
+def migrate():
+    Base.metadata.drop_all(engine)
+    Base.metadata.create_all(engine)
+
+
+migrate()
+
