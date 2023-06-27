@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, BigInteger, Unicode, Float, Interval, Date, ForeignKey
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, mapped_column
 from .country import *
 from .orders import *
 
@@ -40,10 +40,10 @@ class Users(Base):
         unique=False,
         nullable=True
     )
-    country = Column(
+    country = mapped_column(
         Integer,
+        ForeignKey('countries.id'),
         unique=True,
         nullable=True
     )
-    countries = relationship('countries', backref='users')
     order = relationship('orders', backref="users")
