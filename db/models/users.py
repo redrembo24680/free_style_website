@@ -1,7 +1,5 @@
 from sqlalchemy import Column, Integer, BigInteger, Unicode, Float, Interval, Date, ForeignKey
-from sqlalchemy.orm import relationship, mapped_column
-from .country import *
-from .orders import *
+from sqlalchemy.orm import relationship
 
 from .. import Base
 
@@ -27,23 +25,23 @@ class Users(Base):
     )
     email = Column(
         Unicode(225),
-        unique=True,
         nullable=False
     )
     password = Column(
         Unicode(225),
-        unique=False,
         nullable=False
     )
     date = Column(
         Date,
-        unique=False,
-        nullable=True
+        unique=False
     )
-    country = mapped_column(
+    country_id = Column(
         Integer,
         ForeignKey('countries.id'),
-        unique=True,
-        nullable=True
     )
-    order = relationship('orders', backref="users")
+    country = relationship(
+        "Country",
+        backref=__tablename__
+    )
+
+    # order = relationship('orders', backref="users")

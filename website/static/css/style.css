@@ -112,8 +112,6 @@ header {
 }
 
 .registering {
-    color: $pink-500;
-    background-size: 100%;
     margin: 90px;
 }
 
@@ -122,3 +120,6 @@ header {
     margin: 90px;
 }
 
+.country {
+    margin: 190px;
+}
