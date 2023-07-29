@@ -38,21 +38,78 @@
             </button>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
+                    <a class="nav-link" href="login">Login</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="register">Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="country">Country</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Projects</a>
                 </li>
             </ul>
         </div>
-        <div class="d-flex align-items-center">
 
-            <a class="text-reset me-3" href="#">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
+        <a class="text-reset me-3" href="#">
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+        <div class="dropdown">
+        <nav id="primary_nav_wrap">
+            <ul>
+                <li><a href="/adult">Доросле</a>
+                    <ul>
+                        <li class="dir"><a href="/women">Жіноче
+                        </a>
+                            <ul>
+                                <li><a href="/sneakers_kros_women">Кросівки</a></li>
+                                <li><a href="/sneakers_ked_women">Кеди</a></li>
+                                <li><a href="/sandals_women">Сандалі</a></li>
+                                <li><a href="/shoes_on_heels_women">Туфлі_на_підборах</a></li>
+                                <li><a href="/boots_women">Чоботи</a></li>
+                                <li><a href="/ballet_shoes_women">Балетки</a></li>
+                            </ul>
+                        </li>
+                        <li class="dir"><a href="/men">Чоловіче
+                            </a>
+                            <ul>
+                                <li><a href="/flip_flops_men">Шльпанці</a></li>
+                                <li><a href="/sneakers_kros_men">Кросівки</a></li>
+                                <li><a href="/sneakers_ked_men">Кеди</a></li>
+                                <li><a href="/boots_men">Чоботи</a></li>
+                                <li><a href="/shoes_men">Туфлі</a></li>
+                                <li><a href="/sandals_men">Сандалі</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        </div>
+        <!--        <div class="dropdown">-->
+        <!--            <div class="find_boots">-->
+        <!--                <button class="dropbtn"><a href="/adult">Доросле</a></button>-->
+        <!--                <div class="dropdown-content">-->
+        <!--                    <button class="dropbtn"><a href="/men">Чоловіче</a></button>-->
+        <!--                </div>-->
+        <!--                    <div class="dropdown-content">-->
+<!--                                    <a href="/women">Шльпанці</a>-->
+<!--                                    <a href="/women">Кросівки</a>-->
+<!--                                    <a href="/women">Кеди</a>-->
+<!--                                    <a href="/women">Чоботи</a>-->
+<!--                                    <a href="/women">Туфлі</a>-->
+<!--                                    <a href="/women">Сандалі</a>-->
+        <!--                    </div>-->
+        <!--                    <div class="dropdown-content">-->
+        <!--                    <button class="dropbtn"><a href="/women">Жіноче</a></button>-->
+        <!--                    </div>-->
+        <!--                        <div class="dropdown-content">-->
+        <!--                            <a href="/women">Шльпанці</a>-->
+        <!--                            <a href="/women">Кросівки</a>-->
+        <!--                            <a href="/women">Кеди</a>-->
+        <!--                            <a href="/women">Чоботи</a>-->
+        <!--                            <a href="/women">Туфлі</a>-->
+        <!--                            <a href="/women">Сандалі</a>-->
+        <!--                        </div>  -->
+        <!--            </div>-->
+        <!--        </div>-->
+        <div class="d-flex align-items-center">
             <div class="dropdown">
                 <a
                         class="text-reset me-3 dropdown-toggle hidden-arrow"
@@ -80,6 +137,8 @@
                     </li>
                 </ul>
             </div>
+        </div>
+        <div class="d-flex align-items-center">
             <div class="dropdown">
                 <a
                         class="dropdown-toggle d-flex align-items-center hidden-arrow"
@@ -102,7 +161,13 @@
                         aria-labelledby="navbarDropdownMenuAvatar"
                 >
                     <li>
-                        <a class="dropdown-item" href="#">My profile</a>
+                        <a class="dropdown-item" href="/profile">My profile</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="country">Country</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="/add-icon">add icon</a>
                     </li>
                     <li>
                         <a class="dropdown-item" href="#">Settings</a>
@@ -112,6 +177,7 @@
                     </li>
                 </ul>
             </div>
+        </div>
         </div>
     </nav>
 </nav>

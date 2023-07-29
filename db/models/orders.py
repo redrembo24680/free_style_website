@@ -16,13 +16,13 @@ class Orders(Base):
         primary_key=True,
         autoincrement=True
     )
-    ref_user_id = Column(
+    user_id = Column(
         Integer,
         ForeignKey('users.id'),
         unique=True,
         nullable=False
     )
-    ref_product_id = Column(
+    product_id = Column(
         Integer,
         ForeignKey('products.id'),
         unique=True,
@@ -33,4 +33,4 @@ class Orders(Base):
         unique=False,
         nullable=True
     )
-    order_history = relationship('order_history', backref="orders")
+    # order_history = relationship('order_history', backref="orders")

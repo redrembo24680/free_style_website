@@ -13,7 +13,7 @@ class Order_history(Base):
         primary_key=True,
         autoincrement=True
     )
-    ref_order_id = Column(
+    order_id = Column(
         Integer,
         ForeignKey('orders.id'),
         unique=True,

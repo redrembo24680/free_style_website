@@ -56,9 +56,10 @@
                     <select id="country" name="country" class="form-control">
                         <option value="" selected>Choose a Country:</option>
                         {% for country in countries %}
-                        <option value="{{country.id}}">{{country.tittle}}</option>
+                            <option value="{{country.id}}">{{country.tittle}}</option>
                         {% endfor %}
                     </select>
+
                 </div>
 
                 <div class="checkbox mb-3 default_cursor_cs">
@@ -72,5 +73,6 @@
         </main>
     </div>
 </div>
+
 {% endblock %}
 

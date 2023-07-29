@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block head %}
+
+{% block title %}{% endblock %}
+
+{% endblock %}
+
+{% block body %}
+ {% for product in products %}
+    <p>Ім'я: {{ product.name }}
+        id: {{ product.id }}
+        ціна: {{ product.price }}
+        розмір: {{ product.size }}
+    </p>
+ {% endfor %}
+{% endblock %}

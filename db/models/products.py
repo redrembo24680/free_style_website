@@ -39,4 +39,4 @@ class Products(Base):
         Unicode(225),
         nullable=False
     )
-    user = relationship('orders', backref="products")
+    # user = relationship('orders', backref="products")
